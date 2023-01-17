@@ -24,6 +24,9 @@ app.get("/",(req,res)=>{
 app.get("/register",(req,res)=>{
     res.render("register");
 })
+app.get("/login",(req,res)=>{
+    res.render("login");
+})
 app.post("/register", async (req,res)=>{
     try{
         const password = req.body.password;
@@ -46,6 +49,30 @@ app.post("/register", async (req,res)=>{
         }
     }catch(e){
         res.status(404).send(e);
+    }
+})
+
+app.post("/login",async (req,res)=>{
+    try{
+
+        const email = req.body.email;
+        const password= req.body.password;
+
+        const user = await Register.findOne({email:email})
+        if(user){
+            if(user.password===password){
+                res.status(201).render("index")
+            }else{
+                res.status(400).send("Ivalid login")
+            }
+        }else{
+            res.status(400).send("Ivalid login")
+        }
+
+        //console.log(`${email} and password ${password}`)
+
+    }catch(e){
+        res.status(400).send("Ivalid credentials")
     }
 })
 
