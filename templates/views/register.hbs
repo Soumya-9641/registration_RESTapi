@@ -4,64 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/styles.css">
     <title>Document</title>
 </head>
 <body>
-            <section class="user">
-  <div class="user_options-container">
-    <div class="user_options-text">
-      <div class="user_options-unregistered">
-        <h2 class="user_unregistered-title">Don't have an account?</h2>
-        <p class="user_unregistered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-        <button class="user_unregistered-signup" id="signup-button">Sign up</button>
-      </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <div class="user_options-registered">
-        <h2 class="user_registered-title">Have an account?</h2>
-        <p class="user_registered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
-        <button class="user_registered-login" id="login-button">Login</button>
-      </div>
-    </div>
-    
-    <div class="user_options-forms" id="user_options-forms">
-      <div class="user_forms-login">
-        <h2 class="forms_title">Login</h2>
-        <form class="forms_form">
-          <fieldset class="forms_fieldset">
-            <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
-            </div>
-            <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
-            </div>
-          </fieldset>
-          <div class="forms_buttons">
-            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
-            <input type="submit" value="Log In" class="forms_buttons-action">
-          </div>
-        </form>
-      </div>
-      <div class="user_forms-signup">
-        <h2 class="forms_title">Sign Up</h2>
-        <form class="forms_form">
-          <fieldset class="forms_fieldset">
-            <div class="forms_field">
-              <input type="text" placeholder="Full Name" class="forms_field-input" required />
-            </div>
-            <div class="forms_field">
-              <input type="email" placeholder="Email" class="forms_field-input" required />
-            </div>
-            <div class="forms_field">
-              <input type="password" placeholder="Password" class="forms_field-input" required />
-            </div>
-          </fieldset>
-          <div class="forms_buttons">
-            <input type="submit" value="Sign up" class="forms_buttons-action">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+<main>
+  
+	<div class="wrapper">
+		<div class="heading">
+			<h1>Login</h1>
+		</div>
+		<div class="social">
+			<a href="#" class="social-links"><i class="fa-brands fa-facebook-f"></i></a>
+			<a href="#" class="social-links"><i class="fa-brands fa-twitter"></i></a>
+		</div>
+		<form action="/register" method="POST" class="form-group">
+			<p class="account-heading">or use your account</p>
+      
+      <input type="text" name="name" placeholder="name" class="name" autocomplete="off" >
+      
+      <input type="text" name="phone" placeholder="phone" class="phone" autocomplete="off" >
+      <input type="text" name="age" placeholder="enter your age" class="age" autocomplete="off">
+			<input type="text" name="email" placeholder="email" class="email" autocomplete="off">
+      
+			<input type="password" name="password" placeholder="password" class="passwd" autocomplete="off">
+      <input type="password" name="cpassword" placeholder="confirm password" class="passwd" autocomplete="off">
+			<a href="#" class="btn btn-forget">Forget your password?</a>
+			<button type="submit" class="btn btn-primary">Sign Up</button>
+      
+		</form>
+	</div>
+</main>
 </body>
 </html>
